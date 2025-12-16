@@ -9,3 +9,5 @@
 > 
 > **Initial Author:** Elmahrosa International  
 > **Governing law and venue:** Cairo, Arab Republic of Egypt.
+![License: TESL Proprietary](https://img.shields.io/badge/license-TESL-red.svg)  
+See [TESL.md](./TESL.md) and [LEGAL_APPENDIX.md](./LEGAL_APPENDIX.md) for full license terms.
