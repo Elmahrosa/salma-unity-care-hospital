@@ -1,3 +1,33 @@
+# Salma Unity Care Hospital — TEOS Egypt Blockchain Integration
+
+## Overview
+Salma Unity Care Hospital is part of the **TEOS Egypt Blockchain Ecosystem**, designed to deliver secure, transparent, and civic‑first healthcare infrastructure.  
+This project integrates **digital identity, medical records, financial flows, and smart‑city services** into a unified blockchain framework.
+
+---
+
+## Purpose
+- Provide **patient‑centric digital healthcare services** anchored in TEOS Egypt’s compliance‑first blockchain.  
+- Enable **secure medical record management** with verifiable credentials and encrypted access.  
+- Support **hospital operations** with blockchain‑based financial flows, audit trails, and transparent governance.  
+- Align healthcare delivery with **UN Sustainable Development Goals (SDGs)** for global impact.
+
+---
+
+## Features
+- 🏥 **Digital Identity & Patient Access** — secure onboarding, encrypted medical records, and role‑based access.  
+- 💳 **Financial Integration** — blockchain‑powered billing, insurance claims, and ISO 20022 compliant payments.  
+- 📊 **Audit & Compliance** — automated reporting, AI‑driven risk scoring, and transparent governance.  
+- 🌍 **SDG Alignment** — healthcare modules mapped to SDGs for sustainability and investor credibility.  
+- 🔗 **Ecosystem Integration** — connected with TEOS Bankchain, Pi Smart City, and TEOS AI Auditor.
+
+---
+
+## Strategic Impact
+- Strengthens Egypt’s position as a **global hub for civic‑first blockchain healthcare**.  
+- Demonstrates **SDG‑aligned innovation** in medical infrastructure.  
+- Provides **audit‑ready compliance** for regulators, investors, and international partners.
+
 ---
 
 ![License: TESL Proprietary](https://img.shields.io/badge/license-TESL-red.svg)
