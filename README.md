@@ -1,3 +1,11 @@
+# ?? Repo Standing Statement
+
+This repository is a **sovereign original** under **Elmahrosa International — TEOS Egypt**.  
+Governance is anchored in [TEOS-FORGE](https://github.com/Elmahrosa/TEOS-FORGE).  
+Commercial use requires written approval from Elmahrosa International.  
+
+?? Protected under dual license: PolyForm Noncommercial + TEOS Egypt Sovereign License (TESL).
+
 # Salma Unity Care Hospital â€” TEOS Egypt Blockchain Integration
 
 ## Overview
@@ -68,3 +76,9 @@ For licensing inquiries or approvals:
 >  
 > **Initial Author:** Elmahrosa International  
 > **Governing law and venue:** Cairo, Arab Republic of Egypt.
+
+
+## ?? Integration Summary
+This repository is part of the **Elmahrosa Sovereign Stack**.  
+Governance is anchored in **TEOS-FORGE**, with integrations across Bankchain, ERT-LAUNCH, FPBE, and other civic modules.  
+See full details in [docs/integrations.md](https://github.com/Elmahrosa/TEOS-FORGE/blob/main/docs/integrations.md).
