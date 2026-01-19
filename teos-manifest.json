@@ -6,5 +6,6 @@
                    },
     "project":  "salma-unity-care-hospital",
     "version":  "1.0.0",
-    "organization":  "Elmahrosa"
+    "organization":  "Elmahrosa",
+    "registry":  "https://github.com/Elmahrosa/elmahrosa-core.git"
 }

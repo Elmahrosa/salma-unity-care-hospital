@@ -1,0 +1,3 @@
+[submodule "governance/constitution"]
+	path = governance/constitution
+	url = https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution.git
