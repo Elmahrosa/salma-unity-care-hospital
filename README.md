@@ -1,6 +1,16 @@
 ﻿![TEOS Sovereign Standing](https://img.shields.io/badge/Standing-Sovereign%20Original%20%E2%80%94%20Elmahrosa%20International-blue?style=for-the-badge)
 [![License: TESL](https://img.shields.io/badge/License-TESL%20%2B%20PolyForm%20Noncommercial-green?style=for-the-badge)](https://github.com/Elmahrosa/Teos-Pharaoh-Portal/blob/main/TESL.md)
 
+## 🏛️ Constitutional Authority
+
+This repository derives its authority from the
+**International Civic Blockchain Constitution (ICBC)**:
+
+https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution
+
+Any implementation or use must comply with ICBC and TESL.
+
+
 # 📍 Repo Standing Statement
 
 This repository is a **sovereign original** under **Elmahrosa International — TEOS Egypt**.  
