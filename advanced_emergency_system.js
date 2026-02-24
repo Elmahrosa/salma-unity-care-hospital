@@ -5,6 +5,7 @@ const { Translate } = require('@google-cloud/translate').v2;
 const axios = require('axios');
 const i18n = require('i18n');
 const crypto = require('crypto');
+require('dotenv').config();
 
 const app = express();
 app.use(express.json());
@@ -20,14 +21,14 @@ db.once('open', () => {
 });
 
 // Twilio Setup for Emergency Calls
-const twilioClient = twilio('TWILIO_ACCOUNT_SID', 'TWILIO_AUTH_TOKEN');
+const twilioClient = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
 // Google Translate API Setup
-const translate = new Translate({ key: 'GOOGLE_TRANSLATE_API_KEY' });
+const translate = new Translate({ key: process.env.GOOGLE_TRANSLATE_API_KEY });
 
 // i18n Configuration for Multilingual Support
 i18n.configure({
-  locales: ['en', 'ar', 'es', 'fr', 'zh', 'hi'], // Add more as needed
+  locales: ['en', 'ar', 'es', 'fr', 'zh', 'hi'],
   directory: `${__dirname}/locales`,
   defaultLocale: 'en',
 });
@@ -49,13 +50,11 @@ const volunteerSchema = new mongoose.Schema({
     latitude: Number,
     longitude: Number,
   },
-  skills: [String], // e.g., CPR, fire safety, etc.
+  skills: [String],
 });
 
 const Patient = mongoose.model('Patient', patientSchema);
 const Volunteer = mongoose.model('Volunteer', volunteerSchema);
-
-// API Endpoints
 
 // Emergency Assistance Endpoint
 app.post('/emergency', async (req, res) => {
@@ -66,41 +65,30 @@ app.post('/emergency', async (req, res) => {
     return res.status(404).send({ message: 'Patient not found' });
   }
 
-  // Translate emergency guidance to patient's preferred language
   const guidance = await translateText(
     i18n.__(`emergency.guidance.${emergencyType}`),
     patient.preferredLanguage
   );
 
-  // Notify Emergency Services
   twilioClient.calls
     .create({
       url: `${req.protocol}://${req.get('host')}/twiml/${emergencyType}`,
       to: patient.phoneNumber,
-      from: 'YOUR_TWILIO_PHONE_NUMBER',
+      from: process.env.TWILIO_PHONE_NUMBER,
     })
-    .then((call) => {
-      console.log('Emergency call initiated:', call.sid);
-    })
-    .catch((error) => {
-      console.error('Error initiating emergency call:', error);
-    });
+    .then((call) => console.log('Emergency call initiated:', call.sid))
+    .catch((error) => console.error('Error initiating emergency call:', error));
 
-  // Notify Nearby Volunteers
   const volunteers = await findNearbyVolunteers(location, emergencyType);
   volunteers.forEach((volunteer) => {
     twilioClient.messages
       .create({
         body: `Emergency Alert: A ${emergencyType} has occurred nearby. Please assist if possible.`,
-        from: 'YOUR_TWILIO_PHONE_NUMBER',
+        from: process.env.TWILIO_PHONE_NUMBER,
         to: volunteer.phoneNumber,
       })
-      .then((message) => {
-        console.log('Notification sent to volunteer:', message.sid);
-      })
-      .catch((error) => {
-        console.error('Error notifying volunteer:', error);
-      });
+      .then((message) => console.log('Notification sent to volunteer:', message.sid))
+      .catch((error) => console.error('Error notifying volunteer:', error));
   });
 
   res.status(200).send({
@@ -133,13 +121,9 @@ app.get('/first-aid/audio/:language', (req, res) => {
   const audioFilePath = `${__dirname}/audio/first-aid-${language}.mp3`;
 
   res.download(audioFilePath, 'first-aid.mp3', (err) => {
-    if (err) {
-      res.status(500).send({ message: 'Audio file not found' });
-    }
+    if (err) res.status(500).send({ message: 'Audio file not found' });
   });
 });
-
-// Utility Functions
 
 // Translate Text
 async function translateText(text, targetLanguage) {
@@ -148,14 +132,13 @@ async function translateText(text, targetLanguage) {
     return translation;
   } catch (error) {
     console.error('Translation error:', error);
-    return text; // Fallback to original text
+    return text;
   }
 }
 
 // Find Nearby Volunteers
 async function findNearbyVolunteers(location, emergencyType) {
   const volunteers = await Volunteer.find().exec();
-
   return volunteers.filter((volunteer) => {
     const distance = calculateDistance(
       location.latitude,
@@ -163,13 +146,13 @@ async function findNearbyVolunteers(location, emergencyType) {
       volunteer.location.latitude,
       volunteer.location.longitude
     );
-    return distance <= 10 && volunteer.skills.includes(emergencyType); // 10km radius
+    return distance <= 10 && volunteer.skills.includes(emergencyType);
   });
 }
 
 // Calculate Distance (Haversine Formula)
 function calculateDistance(lat1, lon1, lat2, lon2) {
-  const R = 6371; // Radius of Earth in km
+  const R = 6371;
   const dLat = ((lat2 - lat1) * Math.PI) / 180;
   const dLon = ((lon2 - lon1) * Math.PI) / 180;
   const a =
@@ -180,7 +163,6 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
   return R * c;
 }
 
-// Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
