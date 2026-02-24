@@ -1,7 +1,7 @@
 {
-  "name": "salma-unity-care-hospital",
+  "name": "salma-unity-care-hospital-frontend",
   "version": "1.0.0",
-  "description": "Frontend application for Salma Unity Care Hospital, providing a feature-rich and user-friendly interface for managing healthcare services.",
+  "description": "Frontend application for Salma Unity Care Hospital — part of the TEOS Egypt Blockchain Ecosystem by Elmahrosa International",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
@@ -15,16 +15,18 @@
     "react",
     "hospital",
     "healthcare",
+    "blockchain",
+    "solana",
+    "teos",
+    "egypt",
+    "elmahrosa",
     "frontend",
+    "telemedicine",
+    "smart-city",
     "management"
   ],
-  "author": "KOSASIH",
-  "license": "MIT",
-  "homepage": "https://salmaunitycarehospital.com",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Elmahrosa/salma-unity-care-hospital.git"
-  },
+  "author": "Elmahrosa International - Ayman Seif <ayman@teosegypt.com>",
+  "license": "UNLICENSED",
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
