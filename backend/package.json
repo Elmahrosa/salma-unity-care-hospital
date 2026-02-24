@@ -1,7 +1,7 @@
 {
   "name": "salma-unity-care-hospital",
   "version": "1.0.0",
-  "description": "Backend for Salma Unity Care Hospital application",
+  "description": "Blockchain-enabled Hospital Information System — part of the TEOS Egypt Blockchain Ecosystem by Elmahrosa International",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -13,12 +13,20 @@
   "keywords": [
     "hospital",
     "healthcare",
+    "blockchain",
+    "solana",
+    "teos",
+    "egypt",
+    "elmahrosa",
     "api",
     "nodejs",
-    "express"
+    "express",
+    "telemedicine",
+    "iot",
+    "smart-city"
   ],
-  "author": "KOSASIH",
-  "license": "MIT",
+  "author": "Elmahrosa International - Ayman Seif <ayman@teosegypt.com>",
+  "license": "UNLICENSED",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
@@ -41,7 +49,6 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "homepage": "https://github.com/Elmahrosa/salma-unity-care-hospital",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Elmahrosa/salma-unity-care-hospital.git"
