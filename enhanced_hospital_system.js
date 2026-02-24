@@ -4,8 +4,8 @@ const cron = require('node-cron');
 const nodemailer = require('nodemailer');
 const axios = require('axios');
 const twilio = require('twilio');
+require('dotenv').config();
 
-// Initialize Express app
 const app = express();
 app.use(express.json());
 
@@ -22,14 +22,15 @@ db.once('open', () => {
 // Schema Definitions
 const patientSchema = new mongoose.Schema({
   name: String,
+  phoneNumber: String,
   insuranceNumber: String,
   medications: [
     {
       name: String,
       dosage: String,
       frequencyPerDay: Number,
-      timing: String, // e.g., "Before meals", "After meals"
-      reminders: [Date], // Auto-generated reminder times
+      timing: String,
+      reminders: [Date],
     },
   ],
   prescriptions: [
@@ -64,9 +65,7 @@ const Patient = mongoose.model('Patient', patientSchema);
 const Pharmacy = mongoose.model('Pharmacy', pharmacySchema);
 
 // Initialize Twilio for SMS
-const twilioClient = twilio('TWILIO_ACCOUNT_SID', 'TWILIO_AUTH_TOKEN');
-
-// API Endpoints
+const twilioClient = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
 // Add or Update Patient Record
 app.post('/patients', async (req, res) => {
@@ -77,7 +76,6 @@ app.post('/patients', async (req, res) => {
     patient = new Patient({ name, insuranceNumber });
   }
 
-  // Add medications and prescriptions
   if (medications) {
     patient.medications = medications.map((med) => {
       const reminders = generateReminders(med.frequencyPerDay, med.timing);
@@ -96,10 +94,9 @@ app.post('/patients', async (req, res) => {
 app.get('/nearby', async (req, res) => {
   const { latitude, longitude } = req.query;
 
-  // Use Google Maps API (or similar) to find nearby hospitals and pharmacies
-  const apiKey = 'GOOGLE_MAPS_API_KEY'; // Replace with your API key
+  const apiKey = process.env.GOOGLE_MAPS_API_KEY;
   const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=5000&type=hospital|pharmacy&key=${apiKey}`;
-  
+
   try {
     const response = await axios.get(url);
     const places = response.data.results.map((place) => ({
@@ -151,11 +148,10 @@ cron.schedule('*/15 * * * *', async () => {
     patient.medications.forEach((med) => {
       med.reminders.forEach((reminder) => {
         if (Math.abs(reminder - now) < 15 * 60 * 1000) {
-          // Send SMS reminder
           twilioClient.messages.create({
             body: `Reminder: It's time to take your medication ${med.name}. ${med.timing}. Dosage: ${med.dosage}.`,
-            from: 'YOUR_TWILIO_PHONE_NUMBER',
-            to: 'PATIENT_PHONE_NUMBER', // Replace with actual phone number
+            from: process.env.TWILIO_PHONE_NUMBER,
+            to: patient.phoneNumber,
           });
         }
       });
@@ -164,8 +160,6 @@ cron.schedule('*/15 * * * *', async () => {
 
   console.log('Medication reminders sent.');
 });
-
-// Utility Functions
 
 // Generate Reminder Times
 function generateReminders(frequency, timing) {
@@ -178,7 +172,6 @@ function generateReminders(frequency, timing) {
   return reminders;
 }
 
-// Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
