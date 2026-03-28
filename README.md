@@ -3,176 +3,151 @@
 <img src="./docs/salma-unity-care-hospital.jpg" width="180" alt="Salma Unity Care Hospital">
 
 # 🏥 Salma Unity Care Hospital
+
 ### Clinical Demo Layer — Unity Care Sovereign (UCH)
 
-**Live clinical interface demonstration for sovereign healthcare infrastructure.**
+**See how a hospital actually operates — before you commit to infrastructure.**
 
 ---
 
-[![Demo](https://img.shields.io/badge/demo-live-brightgreen?style=for-the-badge)](https://unity-care-hospital.vercel.app)
-[![Platform](https://img.shields.io/badge/platform-UCH_Sovereign-blue?style=for-the-badge)](https://uch.teosegypt.com)
-[![Built By](https://img.shields.io/badge/built_by-Elmahrosa_International-red?style=for-the-badge)](https://teosegypt.com)
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen?style=for-the-badge)](https://unity-care-hospital.vercel.app)
+[![UCH Platform](https://img.shields.io/badge/platform-UCH_Sovereign-blue?style=for-the-badge)](https://uch.teosegypt.com)
+[![Built By](https://img.shields.io/badge/built_by-Elmahrosa-red?style=for-the-badge)](https://teosegypt.com)
 
-[🌐 Live Demo](https://unity-care-hospital.vercel.app) · [📋 Request Access](mailto:ayman@teosegypt.com) · [🔐 UCH Sovereign](https://uch.teosegypt.com)
+👉 **[Open Live Demo](https://unity-care-hospital.vercel.app)**
+📩 **[Request Institutional Access](mailto:ayman@teosegypt.com)**
+🔐 **[UCH Sovereign Platform](https://uch.teosegypt.com)**
 
 </div>
 
 ---
 
-## 🧠 What This Is
+# 🧠 What This Is
 
-**Salma** is aLive clinical interface demonstration for Unity Care Hospital.
+**Salma** is a **live clinical interface demo** built on top of Unity Care Sovereign (UCH).
 
 It allows decision-makers to:
-- Visualize patient workflows end-to-end
-- Understand clinical operations in real context
-- Evaluate the telemedicine and care experience before licensing
 
-> ⚠️ **Important distinction:**
+* Walk through real hospital workflows
+* Evaluate telemedicine & patient lifecycle
+* Understand deployment before purchase
+
+> ⚠️ **Important**
 >
-> ✔ This is a demonstration system — a clinical interface layer — a buyer evaluation tool  
-> ❌ This is a public evaluation demo — not a production deployment system
----
-
-## 🎯 Why This Matters
-
-Hospitals don't buy code. They buy **operational clarity**, **deployment certainty**, and **data control**.
-
-Salma provides the visual proof of how UCH works in real clinical environments — so decision-makers can walk through actual patient workflows, not slide decks.
+> ✔ This is a **demo interface for evaluation**
+> ❌ This is **NOT a production healthcare system**
 
 ---
 
-## 🏗️ Platform Relationship
+# 🎯 Why This Exists
+
+Hospitals don’t buy software.
+
+They buy:
+
+* **Operational clarity**
+* **Deployment certainty**
+* **Data sovereignty**
+
+Salma shows exactly how the system works — **before contracts, before risk.**
+
+---
+
+# 🏗️ Architecture
 
 ```
-Salma (Clinical Demo Interface)
-            ↓
-UCH Sovereign (Production Infrastructure)
-            ↓
-Hospital Deployment (On-Prem / Air-Gapped / Private Cloud)
-```
-
-Salma is the interface. UCH is the fortress underneath it.
-
----
-
-## 🖥️ What You Can Test
-
-| Module | What You See |
-|--------|-------------|
-| 🩺 Patient Portal | Registration, profiles, complete care workflow |
-| 📅 Appointments | Scheduling, doctor selection, status tracking |
-| 📹 Telemedicine | Video consultation UI, session management |
-| 🛏️ Bed Management | Ward occupancy, real-time allocation dashboard |
-| 📊 Clinical Dashboard | Patient records, vitals, care plans |
-| 🤖 AI Assistant | Triage chatbot, care orchestration demo |
-| 🔗 Blockchain Records | Demo-only notarization (optional module) |
-
----
-
-## 🌐 Live Demo
-
-**👉 [unity-care-hospital.vercel.app](https://unity-care-hospital.vercel.app)**
-
-| Role | Email | Password |
-|------|-------|----------|
-| Patient | `patient@demo.uch` | `Demo1234!` |
-| Doctor | `doctor@demo.uch` | `Demo1234!` |
-| Admin | `admin@demo.uch` | `Demo1234!` |
-
-> Demo data resets every 24 hours. No real patient data is stored or used.
-
----
-
-## ⚡ Deployment Reality
-
-**This demo shows:** user workflows · clinical UI · system interactions
-
-**The production UCH system adds:**
-- Full RBAC enforcement (Admin / Doctor / Nurse / Patient)
-- Immutable SHA-256 audit logging (SIEM-compatible)
-- Sovereign deployment (air-gapped / on-prem / private)
-- Security hardening (fail-secure startup, token revocation, CSP)
-- Institutional compliance documentation (HIPAA/GDPR-ready primitives)
-- NDA automation and buyer access management
-
----
-
-## 🚀 From Demo → Deployment
-
-```
-1. Explore this demo            →  Understand the clinical workflow
-2. Request institutional access →  Sign NDA, receive full repo access
-3. Deploy pilot                 →  7–30 days, single site
-4. License or acquire           →  Scale to full institutional system
+Salma (Demo Interface)
+        ↓
+UCH Sovereign (Private Infrastructure)
+        ↓
+Hospital Deployment (On-Prem / Air-Gapped)
 ```
 
 ---
 
-## 💰 Commercial Tiers
+# 🖥️ What You Can Test
 
-| Tier | Investment | Scope |
-|------|-----------|-------|
-| **Pilot Deployment** | $45K – $65K | Single hospital, evaluation period |
-| **Institutional License** | $89K – $120K | Multi-site, source access, audit infrastructure |
-| **Sovereign Stack** | $260K+ | National scale, territorial rights, 12-month support |
-| **White-Label Partner** | $650K+ | Full brand ownership, unrestricted deployment |
-
----
-
-## 🏛️ Built For
-
-- Private hospitals and hospital networks
-- Ministries of Health and national digital health programs
-- Military and restricted deployment environments
-- Sovereign infrastructure projects across MENA and emerging markets
+| Module             | Capability                                   |
+| ------------------ | -------------------------------------------- |
+| 🩺 Patient Portal  | Full lifecycle (register → care → follow-up) |
+| 📅 Appointments    | Booking, scheduling, tracking                |
+| 📹 Telemedicine    | Video consultation interface                 |
+| 🛏️ Bed Management | Real-time hospital capacity                  |
+| 📊 Dashboard       | Clinical operations view                     |
+| 🤖 AI Assistant    | Triage & care routing                        |
+| 🔗 Blockchain      | Demo-only notarization                       |
 
 ---
 
-## 🔐 Sovereign Advantage
+# 🌐 Live Demo Access
 
-Unlike SaaS healthcare platforms:
+👉 [https://unity-care-hospital.vercel.app](https://unity-care-hospital.vercel.app)
 
-- No external cloud dependency — your data never leaves your infrastructure
-- Full data ownership — not a subscription you can lose
-- Deploy inside your own network — on-prem, air-gapped, or private cloud
-- Long-term operational control — no vendor kill-switches
+| Role    | Email                                       | Password  |
+| ------- | ------------------------------------------- | --------- |
+| Patient | [patient@demo.uch](mailto:patient@demo.uch) | Demo1234! |
+| Doctor  | [doctor@demo.uch](mailto:doctor@demo.uch)   | Demo1234! |
+| Admin   | [admin@demo.uch](mailto:admin@demo.uch)     | Demo1234! |
 
----
-
-## 🧪 Tech Stack (Demo Layer)
-
-- **Frontend:** React 18, Tailwind CSS, i18n (Arabic / English)
-- **Backend:** Node.js 20, Express 4, MongoDB
-- **Telemedicine:** Agora RTC
-- **Blockchain stub:** Web3.js (demo mode only)
-- **Deployment:** Vercel (frontend) + lightweight API
+> 🔁 Demo resets every 24h — no real data used
 
 ---
 
-## 📬 Contact
+# 🚀 From Demo → Deployment
 
-Ready to move beyond the demo?
-
-📧 **[ayman@teosegypt.com](mailto:ayman@teosegypt.com)**  
-Include: organization name, country, deployment scope, and your role.
-
-🔐 **[NDA + Full Platform Access →](https://uch.teosegypt.com)**
+```
+1. Explore demo
+2. Request NDA access
+3. Deploy pilot (7–30 days)
+4. License infrastructure
+```
 
 ---
 
-## License
+# 💰 Licensing Model
 
-This public demo repository (`salma-unity-care-hospital`) is released under the [MIT License](LICENSE) for evaluation and technical due diligence.
+| Tier          | Investment   |
+| ------------- | ------------ |
+| Pilot         | $45K – $65K  |
+| Institutional | $89K – $120K |
+| Sovereign     | $260K+       |
+| White-label   | $650K+       |
 
-The production-grade Unity Care Hospital system is proprietary and available under NDA to qualified institutional partners.  
-Request access: [uch.teosegypt.com](https://uch.teosegypt.com)
+---
+
+# 🔐 Why UCH Wins
+
+* No cloud dependency
+* Full data ownership
+* Air-gapped capable
+* No vendor lock-in
+* Long-term control
+
+---
+
+# 📬 Contact
+
+📧 [ayman@teosegypt.com](mailto:ayman@teosegypt.com)
+🌐 [https://uch.teosegypt.com](https://uch.teosegypt.com)
+
+---
+
+# 📜 License
+
+This demo repository is released under the **MIT License** for evaluation.
+
+The full Unity Care Sovereign system is:
+
+* Proprietary
+* NDA-gated
+* Licensed infrastructure
+
 ---
 
 <div align="center">
 
-**Salma demonstrates the interface. Full system available under NDA**
-
-*[Elmahrosa International](https://teosegypt.com) · Alexandriea , Egypt · Est. 2007*
+**Salma shows the hospital. UCH delivers sovereignty.**
 
 </div>
+
+---
