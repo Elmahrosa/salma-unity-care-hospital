@@ -21,7 +21,7 @@
 
 ## 🧠 What This Is
 
-**Salma** is a live clinical demo layer built to show how hospitals operate on top of the **Unity Care Hospital Sovereign (UCH)** infrastructure.
+**Salma** is aLive clinical interface demonstration for Unity Care Hospital.
 
 It allows decision-makers to:
 - Visualize patient workflows end-to-end
@@ -31,8 +31,7 @@ It allows decision-makers to:
 > ⚠️ **Important distinction:**
 >
 > ✔ This is a demonstration system — a clinical interface layer — a buyer evaluation tool  
-> ❌ This is NOT the full sovereign infrastructure or a production deployment system
-
+> ❌ This is a public evaluation demo — not a production deployment system
 ---
 
 ## 🎯 Why This Matters
@@ -164,14 +163,15 @@ Include: organization name, country, deployment scope, and your role.
 
 ## License
 
-This demo repository is MIT licensed for evaluation purposes.  
-The UCH Sovereign production platform is proprietary — governed by [TESL v2.1](https://uch.teosegypt.com).
+This public demo repository (`salma-unity-care-hospital`) is released under the [MIT License](LICENSE) for evaluation and technical due diligence.
 
+The production-grade Unity Care Hospital system is proprietary and available under NDA to qualified institutional partners.  
+Request access: [uch.teosegypt.com](https://uch.teosegypt.com)
 ---
 
 <div align="center">
 
-**Salma shows the hospital. UCH delivers sovereignty.**
+**Salma demonstrates the interface. Full system available under NDA**
 
 *[Elmahrosa International](https://teosegypt.com) · Alexandriea , Egypt · Est. 2007*
 
